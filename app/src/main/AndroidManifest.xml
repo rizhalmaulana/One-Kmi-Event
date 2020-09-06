@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.rizal.onekmievent">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".virtual.VirtualPanahanActivity"></activity>
+        <activity android:name=".virtual.VirtualBadmintonActivity" />
+        <activity android:name=".virtual.VirtualBasketActivity" />
+        <activity android:name=".virtual.VirtualBolaVoli" />
+        <activity android:name=".virtual.VirtualTenisMeja" />
+        <activity android:name=".virtual.VirtualSepakBolaActivity" />
+        <activity android:name=".virtual.VirtualRunActivity" />
+        <activity android:name=".virtual.VirtualBikeActivity" />
+        <activity android:name=".RiwayatActivity" />
+        <activity android:name=".choose.ChooseEntertainmentActivity" />
+        <activity android:name=".choose.ChooseEsportsActivity" />
+        <activity android:name=".choose.ChooseSportsActivity" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".SelfCheckActivity" />
+        <activity android:name=".MengantisipasiActivity" />
+        <activity android:name=".MengobatiActivity" />
+        <activity android:name=".MencegahActivity" />
+        <activity android:name=".MengenalActivity" />
+        <activity android:name=".DetailNews" />
+        <activity android:name=".SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+    </application>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+</manifest>

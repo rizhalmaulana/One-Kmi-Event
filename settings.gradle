@@ -1,0 +1,2 @@
+rootProject.name='One Kmi Event'
+include ':app'

@@ -1,0 +1,741 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RiwayatActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout9"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/colorPrimaryDark"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/backRiwayat"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/ic_chevron_left_black_24dp" />
+
+        <TextView
+            android:id="@+id/text4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/avenir_medium"
+            android:gravity="center_vertical"
+            android:text="RIWAYAT PERLOMBAAN"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/lVirtualBike"
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="16dp"
+                        android:background="@drawable/background"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/linearLayout9">
+
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:contentDescription="@string/todo"
+                            android:src="@drawable/bike" />
+
+                        <TextView
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/avenir_demi"
+                            android:text="Virtual Bike"
+                            android:textColor="@color/black_main"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/checkVirtualBike"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:src="@drawable/ic_check"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lVirtualRun"
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="16dp"
+                        android:background="@drawable/background"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/lVirtualBike">
+
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:contentDescription="@string/todo"
+                            android:src="@drawable/run" />
+
+                        <TextView
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/avenir_demi"
+                            android:text="Virtual Run"
+                            android:textColor="@color/black_main"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/checkVirtualRun"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:src="@drawable/ic_check"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lSepakBola"
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="16dp"
+                        android:background="@drawable/background"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/lVirtualRun">
+
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:contentDescription="@string/todo"
+                            android:src="@drawable/ball" />
+
+                        <TextView
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/avenir_demi"
+                            android:text="Sepakbola"
+                            android:textColor="@color/black_main"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/checkSepakBola"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:src="@drawable/ic_check"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lTenisMeja"
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="16dp"
+                        android:background="@drawable/background"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/lSepakBola">
+
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:contentDescription="@string/todo"
+                            android:src="@drawable/tenismeja" />
+
+                        <TextView
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/avenir_demi"
+                            android:text="Tenis Meja"
+                            android:textColor="@color/black_main"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/checkTenisMeja"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:src="@drawable/ic_check"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lBolaVoli"
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="16dp"
+                        android:background="@drawable/background"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/lTenisMeja">
+
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:contentDescription="@string/todo"
+                            android:src="@drawable/volleyball" />
+
+                        <TextView
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/avenir_demi"
+                            android:text="Bola Voli"
+                            android:textColor="@color/black_main"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/checkVoli"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:src="@drawable/ic_check"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lBasket"
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="16dp"
+                        android:background="@drawable/background"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/lBolaVoli">
+
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:contentDescription="@string/todo"
+                            android:src="@drawable/basketball" />
+
+                        <TextView
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/avenir_demi"
+                            android:text="Bola Basket"
+                            android:textColor="@color/black_main"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/checkBasket"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:src="@drawable/ic_check"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lBadminton"
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="16dp"
+                        android:background="@drawable/background"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/lBasket">
+
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:contentDescription="@string/todo"
+                            android:src="@drawable/badminton" />
+
+                        <TextView
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/avenir_demi"
+                            android:text="Badminton"
+                            android:textColor="@color/black_main"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/checkBadminton"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:src="@drawable/ic_check"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lPanahan"
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="16dp"
+                        android:background="@drawable/background"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/lBadminton">
+
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:contentDescription="@string/todo"
+                            android:src="@drawable/panahan" />
+
+                        <TextView
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/avenir_demi"
+                            android:text="Panahan"
+                            android:textColor="@color/black_main"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/checkPanahan"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:src="@drawable/ic_check"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lPubgCompetition"
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/background"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginStart="16dp"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/linearLayout9">
+
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:src="@drawable/pubggame"
+                            android:contentDescription="@string/todo" />
+
+                        <TextView
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/avenir_demi"
+                            android:text="PUBG Competition"
+                            android:textColor="@color/black_main"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/checkPubg"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_gravity="center"
+                            android:visibility="gone"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:src="@drawable/ic_check" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lMobileLegends"
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/background"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/lPubgCompetition">
+
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:contentDescription="@string/todo"
+                            android:src="@drawable/mobilelegend" />
+
+                        <TextView
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/avenir_demi"
+                            android:text="Mobile Legends"
+                            android:textColor="@color/black_main"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/checkMobileLegends"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="20dp"
+                            android:visibility="gone"
+                            android:layout_marginRight="20dp"
+                            android:src="@drawable/ic_check" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lLudoKing"
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/background"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginStart="16dp"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/lMobileLegends">
+
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:src="@drawable/ludo"
+                            android:contentDescription="@string/todo" />
+
+                        <TextView
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/avenir_demi"
+                            android:text="Ludo Competition"
+                            android:textColor="@color/black_main"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/checkLudoKing"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_gravity="center"
+                            android:visibility="gone"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:src="@drawable/ic_check" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lCatur"
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/background"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/lLudoKing">
+
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:contentDescription="@string/todo"
+                            android:src="@drawable/chess" />
+
+                        <TextView
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/avenir_demi"
+                            android:text="Catur Competition"
+                            android:textColor="@color/black_main"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/checkCatur"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="20dp"
+                            android:visibility="gone"
+                            android:layout_marginRight="20dp"
+                            android:src="@drawable/ic_check" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lMenggambar"
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/background"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginStart="16dp"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/linearLayout9">
+
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:src="@drawable/paint"
+                            android:contentDescription="@string/todo" />
+
+                        <TextView
+                            android:id="@+id/textIdPeserta"
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/avenir_demi"
+                            android:text="Menggambar dan Mewarnai"
+                            android:textColor="@color/black_main"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/checkMenggambar"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_gravity="center"
+                            android:visibility="gone"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:src="@drawable/ic_check" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lStorytelling"
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/background"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/lMenggambar">
+
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:contentDescription="@string/todo"
+                            android:src="@drawable/storytelling" />
+
+                        <TextView
+                            android:id="@+id/textIdPesert"
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/avenir_demi"
+                            android:text="Story Telling"
+                            android:textColor="@color/black_main"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/checkStorytelling"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="20dp"
+                            android:visibility="gone"
+                            android:layout_marginRight="20dp"
+                            android:src="@drawable/ic_check" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginTop="10dp"
+                        android:visibility="invisible"
+                        android:background="@drawable/background"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/lMenggambar">
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

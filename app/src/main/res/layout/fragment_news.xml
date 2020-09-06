@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.news.NewsFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:background="@drawable/lawan"
+                    android:orientation="vertical" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="230dp"
+                    android:background="@drawable/rounded_card"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="36dp"
+                        android:layout_marginRight="16dp"
+                        android:fontFamily="@font/avenir_bold"
+                        android:text="@string/update_kasus_covid_19"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:fontFamily="@font/avenir_medium"
+                        android:text="@string/kasus_yang_terkonfirmasi"
+                        android:textColor="@color/colorPrimaryDark" />
+
+                    <LinearLayout
+                        android:id="@+id/lnKasus"
+                        android:layout_width="match_parent"
+                        android:layout_height="170dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="16dp"
+                        android:background="@drawable/background"
+                        android:orientation="horizontal"
+                        android:padding="10dp"
+                        android:visibility="visible">
+
+                        <LinearLayout
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:layout_marginBottom="10dp"
+                                android:contentDescription="@string/todo"
+                                android:src="@drawable/positif" />
+
+                            <TextView
+                                android:id="@+id/datapositif"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp"
+                                android:fontFamily="@font/avenir_bold"
+                                android:textColor="@color/yellow"
+                                android:textSize="21sp"
+                                tools:text="4092" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/avenir_medium"
+                                android:text="@string/positif"
+                                android:textColor="@color/black_main"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:layout_marginBottom="10dp"
+                                android:contentDescription="@string/todo"
+                                android:src="@drawable/sembuh" />
+
+                            <TextView
+                                android:id="@+id/datasembuh"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp"
+                                android:fontFamily="@font/avenir_bold"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="21sp"
+                                tools:text="440" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/avenir_medium"
+                                android:text="@string/sembuh"
+                                android:textColor="@color/black_main"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:layout_marginBottom="10dp"
+                                android:contentDescription="@string/todo"
+                                android:src="@drawable/depression" />
+
+                            <TextView
+                                android:id="@+id/datameninggal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp"
+                                android:fontFamily="@font/avenir_bold"
+                                android:textColor="@color/red"
+                                android:textSize="21sp"
+                                tools:text="370" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/avenir_medium"
+                                android:text="@string/meninggal"
+                                android:textColor="@color/black_main"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/menuNews"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginRight="16dp"
+                        android:background="@drawable/background"
+                        android:orientation="horizontal"
+                        android:padding="10dp"
+                        android:visibility="visible">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginEnd="16dp"
+                                android:fontFamily="@font/avenir_bold"
+                                android:text="@string/yuk_intip_agar_kita_tetap"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginEnd="16dp"
+                                android:fontFamily="@font/avenir_medium"
+                                android:text="@string/produktif_dirumah_aja"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="14sp" />
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/rv_news"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                tools:listitem="@layout/news_item" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <ProgressBar
+                        android:id="@+id/progressNews"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="50dp"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginBottom="30dp"
+                        android:fontFamily="@font/avenir_medium"
+                        android:text="TEKS COBA"
+                        android:visibility="invisible"
+                        android:textColor="@color/colorPrimaryDark" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
