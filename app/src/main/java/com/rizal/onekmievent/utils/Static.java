@@ -3,7 +3,7 @@ package com.rizal.onekmievent.utils;
 public class Static {
     public final static String MyPref = "my_pref";
 
-    public final static String DOMAIN = "https://onekmievents.000webhostapp.com";
+    public final static String DOMAIN = "http://api.smknsatupebayuran.sch.id";
 
     public final static String BASE_URL = DOMAIN+"/api/";
 

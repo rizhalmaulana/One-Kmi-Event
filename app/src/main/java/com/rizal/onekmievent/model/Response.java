@@ -2,7 +2,7 @@ package com.rizal.onekmievent.model;
 
 public class Response {
     private boolean state;
-    private String data;
+    private Object data;
 
     public boolean isState() {
         return state;
@@ -12,11 +12,11 @@ public class Response {
         this.state = state;
     }
 
-    public String getData() {
+    public Object getData() {
         return data;
     }
 
-    public void setData(String data) {
+    public void setData(Object data) {
         this.data = data;
     }
 }

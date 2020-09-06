@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 
 import com.google.gson.Gson;
+import com.rizal.onekmievent.model.DataPesertaBike;
 import com.rizal.onekmievent.model.Peserta;
 
 public class Preferences {
@@ -16,12 +17,12 @@ public class Preferences {
         }
     }
 
-    public static String getToken(Context context){
-        return getString(context, Static.TOKEN);
-    }
-
     public static void setPeserta(Context context, Peserta peserta){
         putString(context, Static.USER_DATA, new Gson().toJson(peserta));
+    }
+
+    public static String getToken(Context context){
+        return getString(context, Static.TOKEN);
     }
 
     private static SharedPreferences.Editor getEditor(Context context) {

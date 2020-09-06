@@ -23,7 +23,6 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitClient {
     public static Retrofit retrofit;
-
     public static Retrofit getClient(final Context context, String baseUrl) {
 
         HttpLoggingInterceptor logging = new HttpLoggingInterceptor();

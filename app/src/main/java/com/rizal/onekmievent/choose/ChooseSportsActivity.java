@@ -105,7 +105,7 @@ public class ChooseSportsActivity extends AppCompatActivity {
     //Kirim Data Bike
     private void kirimDataBike() {
         Peserta peserta = Preferences.getPeserta(getApplicationContext());
-        AndroidNetworking.post("https://onekmievents.000webhostapp.com/api/tambahDataBike.php")
+        AndroidNetworking.post("http://api.smknsatupebayuran.sch.id/api/tambahDataBike.php")
                 .addBodyParameter("varcharEmployeeID", "" + peserta.getVarcharEmployeeID())
                 .addBodyParameter("txtEmployeeName", "" + peserta.getTxtEmployeeName())
                 .setPriority(Priority.MEDIUM)
@@ -189,7 +189,7 @@ public class ChooseSportsActivity extends AppCompatActivity {
     //Kirim Data Run
     private void kirimDataRun() {
         Peserta peserta = Preferences.getPeserta(getApplicationContext());
-        AndroidNetworking.post("https://onekmievents.000webhostapp.com/api/tambahDataRun.php")
+        AndroidNetworking.post("http://api.smknsatupebayuran.sch.id/api/tambahDataRun.php")
                 .addBodyParameter("varcharEmployeeID", "" + peserta.getVarcharEmployeeID())
                 .addBodyParameter("txtEmployeeName", "" + peserta.getTxtEmployeeName())
                 .setPriority(Priority.MEDIUM)
@@ -308,7 +308,7 @@ public class ChooseSportsActivity extends AppCompatActivity {
 
     private void kirimDataBola() {
         Peserta peserta = Preferences.getPeserta(getApplicationContext());
-        AndroidNetworking.post("https://onekmievents.000webhostapp.com/api/tambahDataBola.php")
+        AndroidNetworking.post("http://api.smknsatupebayuran.sch.id/api/tambahDataBola.php")
                 .addBodyParameter("varcharEmployeeID", "" + peserta.getVarcharEmployeeID())
                 .addBodyParameter("txtEmployeeName", "" + peserta.getTxtEmployeeName())
                 .setPriority(Priority.MEDIUM)
@@ -392,7 +392,7 @@ public class ChooseSportsActivity extends AppCompatActivity {
 
     private void kirimDataTenis() {
         Peserta peserta = Preferences.getPeserta(getApplicationContext());
-        AndroidNetworking.post("https://onekmievents.000webhostapp.com/api/tambahDataTenis.php")
+        AndroidNetworking.post("http://api.smknsatupebayuran.sch.id/api/tambahDataTenis.php")
                 .addBodyParameter("varcharEmployeeID", "" + peserta.getVarcharEmployeeID())
                 .addBodyParameter("txtEmployeeName", "" + peserta.getTxtEmployeeName())
                 .setPriority(Priority.MEDIUM)
@@ -476,7 +476,7 @@ public class ChooseSportsActivity extends AppCompatActivity {
 
     private void kirimDataVoli() {
         Peserta peserta = Preferences.getPeserta(getApplicationContext());
-        AndroidNetworking.post("https://onekmievents.000webhostapp.com/api/tambahDataVoli.php")
+        AndroidNetworking.post("http://api.smknsatupebayuran.sch.id/api/tambahDataVoli.php")
                 .addBodyParameter("varcharEmployeeID", "" + peserta.getVarcharEmployeeID())
                 .addBodyParameter("txtEmployeeName", "" + peserta.getTxtEmployeeName())
                 .setPriority(Priority.MEDIUM)
@@ -560,7 +560,7 @@ public class ChooseSportsActivity extends AppCompatActivity {
 
     private void kirimDataBasket() {
         Peserta peserta = Preferences.getPeserta(getApplicationContext());
-        AndroidNetworking.post("https://onekmievents.000webhostapp.com/api/tambahDataBasket.php")
+        AndroidNetworking.post("http://api.smknsatupebayuran.sch.id/api/tambahDataBasket.php")
                 .addBodyParameter("varcharEmployeeID", "" + peserta.getVarcharEmployeeID())
                 .addBodyParameter("txtEmployeeName", "" + peserta.getTxtEmployeeName())
                 .setPriority(Priority.MEDIUM)
@@ -644,7 +644,7 @@ public class ChooseSportsActivity extends AppCompatActivity {
 
     private void kirimDataBadminton() {
         Peserta peserta = Preferences.getPeserta(getApplicationContext());
-        AndroidNetworking.post("https://onekmievents.000webhostapp.com/api/tambahDataBadminton.php")
+        AndroidNetworking.post("http://api.smknsatupebayuran.sch.id/api/tambahDataBadminton.php")
                 .addBodyParameter("varcharEmployeeID", "" + peserta.getVarcharEmployeeID())
                 .addBodyParameter("txtEmployeeName", "" + peserta.getTxtEmployeeName())
                 .setPriority(Priority.MEDIUM)
@@ -728,7 +728,7 @@ public class ChooseSportsActivity extends AppCompatActivity {
 
     private void kirimDataPanahan() {
         Peserta peserta = Preferences.getPeserta(getApplicationContext());
-        AndroidNetworking.post("https://onekmievents.000webhostapp.com/api/tambahDataPanahan.php")
+        AndroidNetworking.post("http://api.smknsatupebayuran.sch.id/api/tambahDataPanahan.php")
                 .addBodyParameter("varcharEmployeeID", "" + peserta.getVarcharEmployeeID())
                 .addBodyParameter("txtEmployeeName", "" + peserta.getTxtEmployeeName())
                 .setPriority(Priority.MEDIUM)

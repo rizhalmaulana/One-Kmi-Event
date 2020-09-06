@@ -2,6 +2,7 @@ package com.rizal.onekmievent;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -36,6 +37,7 @@ public class LoginActivity extends BaseActivity {
 
     MobileService mobileService;
     LoginActivity activity;
+    private static final String TAG = "LoginActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,10 +45,10 @@ public class LoginActivity extends BaseActivity {
         setContentView(R.layout.activity_login);
         ButterKnife.bind(this);
 
-        if (Preferences.getLoginFlag(getApplicationContext())) {
-            startActivity(new Intent(getApplicationContext(), MainActivity.class));
-            finish();
-        }
+//        if (Preferences.getLoginFlag(getApplicationContext())) {
+//            startActivity(new Intent(getApplicationContext(), MainActivity.class));
+//            finish();
+//        }
 
         mobileService = ApiUtils.MobileService(getApplicationContext());
         btnMasuk.setOnClickListener(v -> {
@@ -66,6 +68,7 @@ public class LoginActivity extends BaseActivity {
                 @Override
                 public void onResponse(Call<Response> call, retrofit2.Response<Response> response) {
                     Response body = response.body();
+                    Log.d(TAG, "onResponse: " + response.errorBody());
                     if (response.isSuccessful()){
                         Peserta peserta = new Gson().fromJson(new Gson().toJson(body.getData()), Peserta.class);
                         if (!body.isState()){
@@ -73,7 +76,11 @@ public class LoginActivity extends BaseActivity {
                             showMessage("No Peserta Salah");
                         } else {
                             progressBar.setVisibility(View.INVISIBLE);
-                            activity.goToHome(body, ConstanKey.FLAG_PERSONE);
+                            Preferences.setPeserta(getApplicationContext(), peserta);
+                            showMessage("Login berhasil. Selamat datang, " + peserta.getTxtEmployeeName());
+                            Preferences.setLoginFlag(getApplicationContext(), true);
+                            startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                            finish();
                         }
                     }
                 }
@@ -81,21 +88,22 @@ public class LoginActivity extends BaseActivity {
                 @Override
                 public void onFailure(Call<Response> call, Throwable t) {
                     showMessage("Terjadi kesalahan, Coba beberapa saat lagi");
+                    Log.d(TAG, "onFailure: " + t.getMessage());
                 }
             });
         });
     }
 
-    private void goToHome(Response body, ConstanKey flagPersone) {
-        if(flagPersone == ConstanKey.FLAG_PERSONE){
-            Peserta peserta = new Gson().fromJson(new Gson().toJson(body.getData()), Peserta.class);
-            Preferences.setPeserta(getApplicationContext(), peserta);
-            showMessage("Login berhasil. Selamat datang, " + peserta.getTxtEmployeeName());
-        }
-
-        Preferences.setLoginType(getApplicationContext(), flagPersone);
-        Preferences.setLoginFlag(getApplicationContext(), true);
-        startActivity(new Intent(getApplicationContext(), MainActivity.class));
-        finish();
-    }
+//    private void goToHome(Response body, ConstanKey flagPersone) {
+//        if(flagPersone == ConstanKey.FLAG_PERSONE){
+//            Peserta peserta = new Gson().fromJson(new Gson().toJson(body.getData()), Peserta.class);
+//            Preferences.setPeserta(getApplicationContext(), peserta);
+//            showMessage("Login berhasil. Selamat datang, " + peserta.getTxtEmployeeName());
+//        }
+//
+//        Preferences.setLoginType(getApplicationContext(), flagPersone);
+//        Preferences.setLoginFlag(getApplicationContext(), true);
+//        startActivity(new Intent(getApplicationContext(), MainActivity.class));
+//        finish();
+//    }
 }

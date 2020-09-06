@@ -16,6 +16,10 @@ public interface MobileService {
     Call<Response> login(@FieldMap Map<String, String> map);
 
     @FormUrlEncoded
+    @POST("updateDataBike.php")
+    Call<Response> update(@FieldMap Map<String, String> map);
+
+    @FormUrlEncoded
     @POST("last-seen")
     Call<Response> lastSeen(@FieldMap Map<String, String> map);
 
